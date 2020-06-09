@@ -2,6 +2,10 @@
 echo "Cloning mender-convert"
 git clone https://github.com/mendersoftware/mender-convert.git mender-convert
 
+echo "Downloading mender-artifact"
+wget -q https://d1b0l86ne08fsf.cloudfront.net/mender-artifact/3.3.0/linux/mender-artifact
+sudo mv mender-artifact /usr/local/bin/
+
 echo "Getting latest Umbrel OS Image"
 wget -q https://github.com/getumbrel/umbrel-os/releases/download/v0.0.2-build.10/image_2020-06-08-umbr3l-lite.zip
 
