@@ -1,0 +1,15 @@
+name: Mender build on push
+env:
+        DOCKER_CLI_EXPERIMENTAL: enabled
+
+on: push
+
+jobs:
+        build:
+                runs-on: ubuntu-18.04
+                name: Build and push dashboard image
+                steps:
+                        - name: Checkout project
+                          uses: actions/checkout@v2
+                        - name: Run build script
+                          run: sudo ./build.sh
