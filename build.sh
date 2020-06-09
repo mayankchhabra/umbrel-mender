@@ -25,6 +25,6 @@ sudo apt install $(cat requirements-deb.txt)
 
 echo "Running mender-convert"
 MENDER_ARTIFACT_NAME=release-1 ./mender-convert \
-   --disk-image input/umbrel-os.img \
+   --disk-image input/umbrel-os-$TAG.img \
    --config configs/raspberrypi4_config \
    --overlay rootfs_overlay_demo/
