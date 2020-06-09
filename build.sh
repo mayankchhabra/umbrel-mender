@@ -1,7 +1,4 @@
 #!/bin/bash
-echo "Installing Git"
-sudo apt install -y git
-
 echo "Cloning mender-convert"
 git clone https://github.com/mendersoftware/mender-convert.git mender-convert
 
@@ -14,7 +11,7 @@ unzip image_2020-06-08-umbr3l-lite.zip
 INPUT_DISK_IMAGE=$(ls *umbr3l*.img)
 echo "Disk image: $INPUT_DISK_IMAGE"
 
-cd media-convert
+cd mender-convert
 
 echo "Installing mender-convert dependencies"
 sudo apt install $(cat requirements-deb.txt)
