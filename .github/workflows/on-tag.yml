@@ -18,10 +18,8 @@ jobs:
                           uses: actions/checkout@v2
                         - name: Run build script
                           run: sudo ./build.sh
-                        - name: Release image to placeholder or release
-                          uses: meeDamian/github-release@v1.0.0
+                        - name: Upload artifacts
+                          uses: actions/upload-artifact@v2
                           with:
-                            gzip: false
-                            files: "mender-convert/deploy/umbrel-os*"
-                            token: ${{ secrets.GITHUB_TOKEN }}
-                            allow_override: true
+                            name: umbrel-os
+                            path: mender-convert/deploy/*.img
