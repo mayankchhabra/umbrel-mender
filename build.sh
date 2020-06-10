@@ -18,13 +18,13 @@ echo "Disk image: $INPUT_DISK_IMAGE"
 
 cd mender-convert
 mkdir -p input
-mv ../$INPUT_DISK_IMAGE input/umbrel-os-$TAG.img
+mv ../$INPUT_DISK_IMAGE input/umbrel-os.img
 
 echo "Installing mender-convert dependencies"
 sudo apt install $(cat requirements-deb.txt)
 
 echo "Running mender-convert"
 MENDER_ARTIFACT_NAME=release-1 ./mender-convert \
-   --disk-image input/umbrel-os-$TAG.img \
+   --disk-image input/umbrel-os.img \
    --config configs/raspberrypi4_config \
    --overlay rootfs_overlay_demo/

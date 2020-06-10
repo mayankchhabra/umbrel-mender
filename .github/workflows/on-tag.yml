@@ -23,6 +23,6 @@ jobs:
                           uses: meeDamian/github-release@v1.0.0
                           with:
                             gzip: false
-                            files: "deploy/umbrel-os*"
+                            files: "mender-convert/deploy/umbrel-os*"
                             token: ${{ secrets.GITHUB_TOKEN }}
                             allow_override: true
