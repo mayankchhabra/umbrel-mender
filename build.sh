@@ -28,6 +28,9 @@ echo "Bootstrapping rootfs overlay"
     --output-dir ${PWD}/rootfs_overlay_demo \
     --server-ip 54.159.58.48
 
+echo "Installing pxz for some unknown reason"
+sudo apt-get install -y pxz
+
 echo "Running mender-convert"
 MENDER_ARTIFACT_NAME=release-1 ./mender-convert \
    --disk-image input/umbrel-os.img \
