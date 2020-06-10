@@ -11,9 +11,7 @@ IMAGE_ROOTFS_EXTRA_SPACE=0
 IMAGE_OVERHEAD_FACTOR=1.0
 
 # Best compression there is!
-# MENDER_COMPRESS_DISK_IMAGE=lzma
-
-MENDER_STORAGE_DEVICE="/dev/mmcblk0p2"
+MENDER_COMPRESS_DISK_IMAGE=lzma
 
 #
 # Resize the data partition to fill the remaining space, using parted, with systemd
@@ -48,3 +46,5 @@ EOF
 }
 
 PLATFORM_MODIFY_HOOKS+=(grow_data_partition)
+
+MENDER_STORAGE_DEVICE="/dev/mmcblk0p2"
