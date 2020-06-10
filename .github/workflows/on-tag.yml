@@ -22,4 +22,4 @@ jobs:
                           uses: actions/upload-artifact@v2
                           with:
                             name: umbrel-os
-                            path: mender-convert/deploy/*.img
+                            path: mender-convert/deploy/*.img.gz
