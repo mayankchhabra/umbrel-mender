@@ -23,6 +23,11 @@ mv ../$INPUT_DISK_IMAGE input/umbrel-os.img
 echo "Installing mender-convert dependencies"
 sudo apt install $(cat requirements-deb.txt)
 
+echo "Bootstrapping rootfs overlay"
+./scripts/bootstrap-rootfs-overlay-demo-server.sh \
+    --output-dir ${PWD}/rootfs_overlay_demo \
+    --server-ip 54.159.58.48
+
 echo "Running mender-convert"
 MENDER_ARTIFACT_NAME=release-1 ./mender-convert \
    --disk-image input/umbrel-os.img \

@@ -11,7 +11,6 @@ on:
 jobs:
         build:
                 runs-on: ubuntu-18.04
-                name: Build and push dashboard image
                 steps:
                         - name: Set tag
                           run: echo ::set-env name=TAG::${GITHUB_REF/refs\/tags\//}
