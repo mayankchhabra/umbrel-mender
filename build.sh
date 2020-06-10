@@ -28,3 +28,6 @@ MENDER_ARTIFACT_NAME=release-1 ./mender-convert \
    --disk-image input/umbrel-os.img \
    --config configs/raspberrypi4_config \
    --overlay rootfs_overlay_demo/
+
+echo "Delete ext4 image as we don't need it"
+rm deploy/*.ext4
