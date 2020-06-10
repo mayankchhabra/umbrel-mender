@@ -32,6 +32,7 @@ echo "Running mender-convert"
 MENDER_ARTIFACT_NAME=release-1 ./mender-convert \
    --disk-image input/umbrel-os.img \
    --config configs/raspberrypi4_config \
+   --config configs/images/raspberrypi_raspbian_config \
    --config ../mender-config \
    --overlay rootfs_overlay_demo/
 
